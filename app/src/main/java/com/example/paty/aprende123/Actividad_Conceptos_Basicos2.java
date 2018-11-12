@@ -16,7 +16,6 @@ public class Actividad_Conceptos_Basicos2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_actividad__conceptos__basicos2);
 
-        // Get reference of widgets from XML layout
         final RelativeLayout rl = (RelativeLayout) findViewById(R.id.rl);
         Button btn_top = (Button) findViewById(R.id.btn_top);
         Button btn_bottom = (Button) findViewById(R.id.btn_bottom);
@@ -24,26 +23,20 @@ public class Actividad_Conceptos_Basicos2 extends AppCompatActivity {
         Button btn_left = (Button) findViewById(R.id.btn_left);
         Button btn_center = (Button) findViewById(R.id.btn_center);
 
-        // Make the Toast message
         final Toast toast = Toast.makeText(
-                getApplicationContext(), // Context
-                "Simple Toast", // Message
-                Toast.LENGTH_SHORT // Short Duration
+                getApplicationContext(),
+                "Simple Toast",
+                Toast.LENGTH_SHORT
         );
 
         btn_top.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /*
-                    setGravity(int gravity, int xOffset, int yOffset)
-                        Set the location at which the notification should appear on the screen.
-                 */
+
                 toast.setGravity(Gravity.TOP,0,10);
 
-                // Set the Toast message
                 toast.setText("POSICIÓN: ARRIBA");
 
-                // Show the Toast on app interface
                 toast.show();
             }
         });
