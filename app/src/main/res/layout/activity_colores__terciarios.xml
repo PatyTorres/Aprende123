@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Colores_Terciarios">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="match_parent"
+            android:layout_height="155dp"
+            app:srcCompat="@drawable/colores_terciarios" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="150dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/AmarilloVerdoso"
+            android:layout_width="315dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:layout_marginTop="146dp"
+            android:background="@color/md_falcon_500"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:onClick="AmarilloVerdoso"
+            android:text="VERDE + AMARILLO = AMARILLO VERDOSO"
+            android:textColor="@color/md_green_100" />
+
+        <Button
+            android:id="@+id/AzulVerdoso"
+            android:layout_width="315dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:layout_marginTop="203dp"
+            android:background="@color/md_falcon_500"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:onClick="AzulVerdoso"
+            android:text="VERDE+ AZUL = AZUL VERDOSO"
+            android:textColor="@color/md_green_100" />
+
+        <Button
+            android:id="@+id/RojoAnaranjado"
+            android:layout_width="315dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:layout_marginBottom="201dp"
+            android:background="@color/md_falcon_500"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:onClick="RojoAnaranjado"
+            android:text="ROJO + NARANJA = ROJO ANARANJADO"
+            android:textColor="@color/md_green_100" />
+
+        <Button
+            android:id="@+id/AzulViolaceo"
+            android:layout_width="315dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:background="@color/md_falcon_500"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:onClick="AzulViolaceo"
+            android:text="AZUL + VIOLETA = AZUL VIOLÁCEO"
+            android:textColor="@color/md_green_100" />
+
+        <Button
+            android:id="@+id/RojoViolaceo"
+            android:layout_width="315dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:layout_marginBottom="143dp"
+            android:background="@color/md_falcon_500"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:onClick="RojoViolaceo"
+            android:text="ROJO + VIOLETA = ROJO VIOLÁCEO"
+            android:textColor="@color/md_green_100" />
+
+        <Button
+            android:id="@+id/AmarilloAnaranjado"
+            android:layout_width="315dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:layout_marginBottom="87dp"
+            android:background="@color/md_falcon_500"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:onClick="AmarilloAnaranjado"
+            android:text="AMARILLO + NARANJA = AMARILLO ANARANJADO"
+            android:textColor="@color/md_green_100" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="152dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/md_black_1000"
+            android:onClick="menu_ensenanza"
+            android:text="CURSO FINALIZADO"
+            android:textColor="@android:color/background_light" />
+    </LinearLayout>
+
+</RelativeLayout>

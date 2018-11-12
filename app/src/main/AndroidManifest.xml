@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.paty.aprende123">
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Ingresar_Datos_Estudiante" />
+        <activity android:name=".Consultar_Datos_Estudiante" />
+        <activity android:name=".Menu" />
+        <activity android:name=".Menu_Ensenanza" />
+        <activity android:name=".Menu_Opciones" />
+        <activity android:name=".Conteo" />
+        <activity android:name=".Colores" />
+        <activity android:name=".Conceptos_Basicos" />
+        <activity android:name=".Monedas" />
+        <activity android:name=".Numeros_Mayas" />
+        <activity android:name=".Operaciones" />
+        <activity android:name=".Colores_Secundarios" />
+        <activity android:name=".Colores_Terciarios" />
+        <activity android:name=".Consultar_Datos_Estudiante_Modificar" />
+        <activity android:name=".Consultar_Datos_Estudiante_Eliminar" />
+        <activity android:name=".Ayuda" />
+        <activity android:name=".QuizActivity" />
+        <activity android:name=".StartingScreenActivity" />
+        <activity android:name=".Menu_Actividad" />
+        <activity android:name=".Conteo2" />
+        <activity android:name=".Conteo3" />
+        <activity android:name=".Conteo4" />
+        <activity android:name=".Conteo5" />
+        <activity android:name=".Conteo6" />
+        <activity android:name=".Conteo7" />
+        <activity android:name=".Conteo8" />
+        <activity android:name=".Conteo9" />
+        <activity android:name=".Conteo10" />
+        <activity android:name=".Actividad_Unidad_Medida" />
+        <activity android:name=".Actividad_unidad_medida2" />
+        <activity android:name=".Actividad_Conteo" />
+        <activity android:name=".Actividad_Monedas" />
+        <activity android:name=".Actividad_Figuras_Geometricas" />
+        <activity android:name=".Actividad_Operaciones" />
+        <activity android:name=".Conteo11" />
+        <activity android:name=".Conceptos_Basicos2" />
+        <activity android:name=".Conceptos_Basicos3" />
+        <activity android:name=".Conceptos_Basicos4" />
+        <activity android:name=".Conceptos_Basicos5" />
+        <activity android:name=".Conceptos_Basicos6" />
+        <activity android:name=".Conceptos_Basicos7" />
+        <activity android:name=".Conceptos_Basicos8" />
+        <activity android:name=".Conceptos_Basicos9" />
+        <activity android:name=".Conceptos_Basicos10" />
+        <activity android:name=".Conceptos_Basicos11" />
+        <activity android:name=".Conceptos_Basicos12" />
+        <activity android:name=".Conceptos_Basicos13" />
+        <activity android:name=".Conceptos_Basicos14" />
+        <activity android:name=".Conceptos_Basicos15" />
+        <activity android:name=".Conceptos_Basicos16" />
+        <activity android:name=".Conceptos_Basicos18" />
+        <activity android:name=".Conceptos_Basicos19" />
+        <activity android:name=".Conceptos_Basicos20" />
+        <activity android:name=".Conceptos_Basicos21" />
+        <activity android:name=".Conceptos_Basicos22" />
+        <activity android:name=".Conceptos_Basicos23" />
+        <activity android:name=".Conceptos_Basicos24" />
+        <activity android:name=".Conceptos_Basicos25" />
+        <activity android:name=".Conceptos_Basicos26" />
+        <activity android:name=".Conceptos_Basicos27" />
+        <activity android:name=".Conceptos_Basicos28" />
+        <activity android:name=".Conceptos_Basicos17" />
+        <activity android:name=".Actividad_Conteo2" />
+        <activity android:name=".Actividad_Conteo3" />
+        <activity android:name=".Actividad_Conteo4" />
+        <activity android:name=".Actividad_Conteo5" />
+        <activity android:name=".Figuras_Geometricas" />
+        <activity android:name=".Figuras_Geometricas2" />
+        <activity android:name=".Figuras_Geometricas3" />
+        <activity android:name=".Figuras_Geometricas4" />
+        <activity android:name=".Figuras_Geometricas5" />
+        <activity android:name=".Figuras_Geometricas6" />
+        <activity android:name=".Figuras_Geometricas7" />
+        <activity android:name=".Figuras_Geometricas8" />
+        <activity android:name=".Figuras_Geometricas9" />
+        <activity android:name=".Operaciones2" />
+        <activity android:name=".Operaciones3" />
+        <activity android:name=".Operaciones4" />
+        <activity android:name=".Operaciones5" />
+        <activity android:name=".Operaciones6" />
+        <activity android:name=".Operaciones7" />
+        <activity android:name=".Operaciones8" />
+        <activity android:name=".Operaciones9" />
+        <activity android:name=".Operaciones10" />
+        <activity android:name=".Actividad_Conceptos_Basicos" />
+        <activity android:name=".Actividad_Conceptos_Basicos2" />
+        <activity android:name=".Salir" />
+        <activity android:name=".Actividad_Conteo_Practica" />
+        <activity android:name=".Actividad_Operaciones2" />
+        <activity android:name=".Consultar_Datos"></activity>
+    </application>
+
+</manifest>

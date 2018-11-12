@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Aprende123</string>
+    <string-array name="items">
+        <item>Número 1</item>
+        <item>Número 2</item>
+        <item>Número 3</item>
+        <item>Número 4</item>
+        <item>Número 5</item>
+        <item>Número 6</item>
+        <item>Número 7</item>
+        <item>Número 8</item>
+        <item>Número 9</item>
+    </string-array>
+    <string name="title_activity_conteo4">Conteo4</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_example">Example action</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_ens">Enseñanza</string>
+    <string name="nav_eva">Evaluaciones</string>
+    <string name="nav_act">Actividades</string>
+    <string name="nav_usu">Usuario</string>
+    <string name="nav_opciones" />
+    <string name="nav_ayuda">Ayuda</string>
+    <string name="nav_opc">Opciones</string>
+    <string name="action_settings2">setting2</string>
+    <string name="action_home">home</string>
+    <string name="title_activity_menu_principal">activity_menu_principal</string>
+
+</resources>

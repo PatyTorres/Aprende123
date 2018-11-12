@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/md_blue_grey_200"
+    tools:context=".Ingresar_Datos_Estudiante">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:gravity="center"
+                android:text="INGRESE LOS DATOS DEL ALUMNO"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="@color/md_grey_50"
+                android:textColorHint="@color/md_grey_50" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="15dp"
+                android:background="@color/md_blue_grey_900"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="115dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/usuario" />
+
+                <EditText
+                    android:id="@+id/campoIdentificacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@color/md_blue_grey_800"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="Ingrese Identificación del Alumno"
+                    android:inputType="number"
+                    android:numeric="integer"
+                    android:textColor="@color/md_grey_300"
+                    android:textColorHint="@color/md_grey_50"
+                    android:textStyle="italic" />
+
+                <EditText
+                    android:id="@+id/EditTextNombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/md_blue_grey_800"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="Ingrese el Nombre del Alumno"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/md_grey_300"
+                    android:textColorHint="@color/md_grey_50"
+                    android:textStyle="italic" />
+
+                <EditText
+                    android:id="@+id/EditTextGrado"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/md_blue_grey_800"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="Ingrese el Grado que cursa el Alumno"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/md_grey_300"
+                    android:textColorHint="@color/md_grey_50"
+                    android:textStyle="italic" />
+
+                <EditText
+                    android:id="@+id/EditTextEdad"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/md_blue_grey_800"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="Ingrese la edad del Estudiante"
+                    android:inputType="number"
+                    android:numeric="integer"
+                    android:textColor="@color/md_grey_300"
+                    android:textColorHint="@color/md_grey_50"
+                    android:textStyle="italic" />
+
+                <EditText
+                    android:id="@+id/EditTextDiscapacidad"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/md_blue_grey_800"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="Ingrese la Discapacidad: (Intelectual/física)"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/md_grey_300"
+                    android:textColorHint="@color/md_grey_50"
+                    android:textStyle="italic" />
+
+                <EditText
+                    android:id="@+id/EditTextEspecificaciones"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/md_blue_grey_800"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="Ingrese las Especificaciones"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/md_grey_300"
+                    android:textColorHint="@color/md_grey_50"
+                    android:textStyle="italic" />
+
+                <Button
+                    android:id="@+id/btnIngresar"
+                    android:layout_width="266dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/md_blue_A100"
+                    android:foregroundGravity="center_vertical|center"
+                    android:gravity="center"
+                    android:onClick="insert"
+                    android:text="Ingresar Datos"
+                    android:textColor="@color/md_grey_50" />
+
+                <Button
+                    android:id="@+id/btnPrinci"
+                    android:layout_width="150dp"
+                    android:layout_height="140dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/atras2"
+                    android:gravity="center"
+                    android:onClick="principal"
+                    android:text="" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

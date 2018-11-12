@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_cyan_50"
+    tools:context=".Menu_Ensenanza">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        tools:context=".MainActivity">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="583dp"
+                    android:background="@color/md_cyan_50"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="335dp"
+                        android:layout_height="198dp"
+                        app:srcCompat="@drawable/menu_ensenanza" />
+
+                    <Button
+                        android:id="@+id/btnConteo"
+                        android:layout_width="224dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@color/md_lime_A200"
+                        android:gravity="center"
+                        android:onClick="conteo"
+                        android:text="CONTEO"
+                        android:textColor="@android:color/background_light"
+                        android:textColorLink="@android:color/darker_gray" />
+
+                    <Button
+                        android:id="@+id/btnColores"
+                        android:layout_width="224dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/colorAccent"
+                        android:gravity="center"
+                        android:onClick="colores"
+                        android:text="COLORES"
+                        android:textColor="@android:color/background_light" />
+
+                    <Button
+                        android:id="@+id/btnConceptosBasicos"
+                        android:layout_width="224dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/md_brown_700"
+                        android:gravity="center"
+                        android:onClick="conceptos_basicos"
+                        android:text="CONCEPTOS BASICOS"
+                        android:textColor="@android:color/background_light" />
+
+                    <Button
+                        android:id="@+id/btnNumerosMayas"
+                        android:layout_width="224dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/md_green_800"
+                        android:gravity="center"
+                        android:onClick="figuras_geometricas"
+                        android:text="FIGURAS GEOMÉTRICAS"
+                        android:textColor="@android:color/background_light" />
+
+                    <Button
+                        android:id="@+id/btnOperaciones"
+                        android:layout_width="224dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/md_amber_900"
+                        android:gravity="center"
+                        android:onClick="operaciones"
+                        android:text="SUMA"
+                        android:textColor="@android:color/background_light" />
+
+                    <Button
+                        android:id="@+id/btnMenuPrincipal"
+                        android:layout_width="224dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/colorPrimaryDark"
+                        android:gravity="center"
+                        android:onClick="menu"
+                        android:text="MENU PRINCIPAL"
+                        android:textColor="@android:color/background_light" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+</RelativeLayout>

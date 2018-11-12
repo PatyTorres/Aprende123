@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_indigo_200"
+    tools:context=".StartingScreenActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="93dp"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"
+                android:foregroundGravity="center"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text='EXAMEN DE CONTENIDOS "APRENDE 123"'
+                android:textColor="@android:color/background_dark"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_view_highscore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/button_start_quiz"
+                android:layout_gravity="center"
+                android:layout_marginBottom="30dp"
+                android:foregroundGravity="center"
+                android:gravity="center"
+                android:text="Puntuación: 0"
+                android:textColor="@color/md_blue_grey_600" />
+
+            <Button
+                android:id="@+id/button_start_quiz"
+                android:layout_width="146dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@color/md_blue_grey_900"
+                android:foregroundGravity="center"
+                android:gravity="center"
+                android:text="INICIAR EXAMEN"
+                android:textColor="@color/md_blue_grey_50" />
+
+            <Spinner
+                android:id="@+id/spinner_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/button_start_quiz"
+                android:layout_alignStart="@+id/button_start_quiz"
+                android:layout_below="@+id/button_start_quiz"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:foregroundGravity="center"
+                android:gravity="center" />
+
+            <Spinner
+                android:id="@+id/spinner_difficulty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/button_start_quiz"
+                android:layout_alignStart="@+id/button_start_quiz"
+                android:layout_below="@+id/spinner_category"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:gravity="center" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

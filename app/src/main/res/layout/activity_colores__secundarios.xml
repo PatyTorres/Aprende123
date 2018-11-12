@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fondo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Colores_Secundarios">
+
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="289dp"
+        android:layout_height="187dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/colores_secundarios" />
+
+    <Button
+        android:id="@+id/violeta"
+        android:layout_width="315dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="195dp"
+        android:onClick="violeta"
+        android:text="AZUL + ROJO = VIOLETA" />
+
+    <Button
+        android:id="@+id/verde"
+        android:layout_width="315dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:onClick="verde"
+        android:text="AZUL + AMARILLO = VERDE" />
+
+    <Button
+        android:id="@+id/naranja"
+        android:layout_width="315dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="198dp"
+        android:onClick="naranja"
+        android:text="ROJO + AMARILLO = NARANJA" />
+
+    <Button
+        android:id="@+id/btnSiguienteCT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="69dp"
+        android:onClick="colores_terciarios"
+        android:text="Siguiente" />
+
+</RelativeLayout>

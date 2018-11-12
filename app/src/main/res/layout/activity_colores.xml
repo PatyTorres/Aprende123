@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Colores">
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="305dp"
+        android:layout_height="180dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/colores" />
+
+    <Button
+        android:id="@+id/rojo"
+        android:layout_width="315dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="184dp"
+        android:background="@color/md_blue_grey_500"
+        android:gravity="center"
+        android:onClick="rojo"
+        android:text="CAMBIAR A ROJO"
+        android:textColor="@color/md_blue_grey_100"
+        android:textColorLink="@android:color/darker_gray" />
+
+    <Button
+        android:id="@+id/amarillo"
+        android:layout_width="315dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/md_blue_grey_500"
+        android:gravity="center"
+        android:onClick="amarillo"
+        android:text="CAMBIAR A AMARILLO"
+        android:textColor="@color/md_blue_grey_100" />
+
+    <Button
+        android:id="@+id/azul"
+        android:layout_width="315dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="188dp"
+        android:background="@color/md_blue_grey_500"
+        android:gravity="center"
+        android:onClick="azul"
+        android:text="CAMBIAR A AZUL"
+        android:textColor="@color/md_blue_grey_100" />
+
+    <Button
+        android:id="@+id/btnSiguienteNS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="91dp"
+        android:background="@color/md_blue_grey_100"
+        android:onClick="colores_secundarios"
+        android:text="Siguiente"
+        android:textColor="@color/md_blue_grey_500" />
+
+</RelativeLayout>

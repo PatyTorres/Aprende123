@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/fondo">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical"
+            android:layout_alignParentLeft="true">
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="86dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="APRENDE 123"
+                android:textColor="@android:color/background_dark"
+                android:textSize="30sp"
+                android:textStyle="bold|italic" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="435dp"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btnIngresar"
+                    android:layout_width="246dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@color/md_blue_600"
+                    android:gravity="center"
+                    android:onClick="insert"
+                    android:text="INGRESAR DATOS DE ESTUDIANTE"
+                    android:textColor="@color/md_indigo_50" />
+
+                <Button
+                    android:id="@+id/btnMenuPrincipal"
+                    android:layout_width="132dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/md_blue_600"
+                    android:gravity="center"
+                    android:onClick="menu"
+                    android:text="MENU PRINCIPAL"
+                    android:textColor="@color/md_indigo_50" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

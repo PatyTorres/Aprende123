@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="0dp"
+    android:paddingRight="0dp"
+    android:paddingLeft="0dp"
+    android:paddingBottom="0dp"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:id="@+id/layout1"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Actividad_Operaciones2">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical"
+            android:layout_alignParentLeft="true">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"
+                android:background="@color/md_deep_purple_900"
+                android:gravity="center"
+                android:text="Identifica la respuesta.  Haz clic sobre la respuesta correcta."
+                android:textColor="@android:color/background_light"
+                android:textSize="24sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="14"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:gravity="center"
+                android:text="+10"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView24"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:foregroundGravity="center"
+                android:gravity="center"
+                android:text="___________________"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnRespuesta1"
+                    android:layout_width="4dp"
+                    android:layout_height="55dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="top|center"
+                    android:layout_margin="20dp"
+                    android:layout_weight="1"
+                    android:background="@color/md_grey_600"
+                    android:onClick="menu_actividad"
+                    android:text="24"
+                    android:textColor="@color/md_brown_50"
+                    android:textSize="26sp" />
+
+                <Button
+                    android:id="@+id/btnRespuesta2"
+                    android:layout_width="4dp"
+                    android:layout_height="55dp"
+                    android:layout_margin="20dp"
+                    android:layout_weight="1"
+                    android:background="@color/md_grey_600"
+                    android:gravity="center"
+                    android:text="5"
+                    android:textColor="@color/md_brown_50"
+                    android:textSize="26sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnRespuesta3"
+                    android:layout_width="4dp"
+                    android:layout_height="55dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="top|center"
+                    android:layout_margin="20dp"
+                    android:layout_weight="1"
+                    android:background="@color/md_grey_600"
+                    android:text="20"
+                    android:textColor="@color/md_brown_50"
+                    android:textSize="26sp" />
+
+                <Button
+                    android:id="@+id/btnRespuesta4"
+                    android:layout_width="4dp"
+                    android:layout_height="55dp"
+                    android:layout_margin="20dp"
+                    android:layout_weight="1"
+                    android:background="@color/md_grey_600"
+
+                    android:text="3"
+                    android:textColor="@color/md_brown_50"
+                    android:textSize="26sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
