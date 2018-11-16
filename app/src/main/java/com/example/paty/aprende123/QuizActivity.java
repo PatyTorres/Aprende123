@@ -46,7 +46,6 @@ public class QuizActivity extends AppCompatActivity {
     private CountDownTimer countDownTimer;
     private long timeLeftInMillis;
 
-    //private List<Question> questionList;
     private ArrayList<Question> questionList;
     private int questionCounter;
     private int questionCountTotal;

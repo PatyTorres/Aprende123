@@ -32,7 +32,7 @@ public class Consultar_Datos_Estudiante_Eliminar extends AppCompatActivity {
 
         else
         {
-            AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "administracion", null, 1);
+            AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "Proyecto", null, 1);
             SQLiteDatabase bd=admin.getWritableDatabase();
             String campoIdentificacion=var1.getText().toString();
 
@@ -65,7 +65,7 @@ public class Consultar_Datos_Estudiante_Eliminar extends AppCompatActivity {
         }
         else
         {
-            AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "administracion", null, 1);
+            AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "Proyecto", null, 1);
             SQLiteDatabase bd=admin.getWritableDatabase();
             String campoIdentificacion=var1.getText().toString();
 

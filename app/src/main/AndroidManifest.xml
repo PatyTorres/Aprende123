@@ -18,7 +18,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".Ingresar_Datos_Estudiante" />
-        <activity android:name=".Consultar_Datos_Estudiante" />
         <activity android:name=".Menu" />
         <activity android:name=".Menu_Ensenanza" />
         <activity android:name=".Menu_Opciones" />
@@ -103,10 +102,10 @@
         <activity android:name=".Operaciones10" />
         <activity android:name=".Actividad_Conceptos_Basicos" />
         <activity android:name=".Actividad_Conceptos_Basicos2" />
-        <activity android:name=".Salir" />
         <activity android:name=".Actividad_Conteo_Practica" />
         <activity android:name=".Actividad_Operaciones2" />
-        <activity android:name=".Consultar_Datos"></activity>
+        <activity android:name=".Consultar_Datos" />
+        <activity android:name=".A_Cerca_de"></activity>
     </application>
 
 </manifest>

@@ -17,7 +17,6 @@ public class Conteo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_conteo);
 
-        // Get the widgets reference from XML layout
         final RelativeLayout rl = (RelativeLayout) findViewById(R.id.rl);
         Button btn = (Button) findViewById(R.id.btn);
         final ImageView iv = (ImageView) findViewById(R.id.iv);
@@ -25,23 +24,7 @@ public class Conteo extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /*
-                    public void setImageDrawable (Drawable drawable)
-                        Sets a drawable as the content of this ImageView.
 
-                        Parameters
-                        drawable : the Drawable to set, or null to clear the content
-                */
-
-                /*
-                    public Drawable getDrawable (int id)
-                        Return a drawable object associated with a particular resource ID.
-                        Various types of objects will be returned depending on the
-                        underlying resource -- for example, a solid color, PNG image,
-                        scalable image, etc. The Drawable API hides these implementation details.
-                */
-
-                // Set ImageView image from drawable resource
                 iv.setImageDrawable(getDrawable(R.drawable.num1));
             }
         });

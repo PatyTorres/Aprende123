@@ -31,7 +31,7 @@ public class Consultar_Datos extends AppCompatActivity {
         }
         else
         {
-            AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "administracion", null, 1);
+            AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "Proyecto", null, 1);
             SQLiteDatabase bd=admin.getWritableDatabase();
             String campoIdentificacion=var1.getText().toString();
 
@@ -54,51 +54,7 @@ public class Consultar_Datos extends AppCompatActivity {
         }
 
     }
-   /* public void modificar(View v){
-        if(var1.getText().length()==0){
-            var1.setError("Ingresar la Identificación");
 
-        }
-        else
-        {
-            AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "administracion", null, 1);
-            SQLiteDatabase bd=admin.getWritableDatabase();
-            String campoIdentificacion=var1.getText().toString();
-            String campoNombre=var2.getText().toString();
-            String campoGrado=var3.getText().toString();
-            String campoEdad=var4.getText().toString();
-            String campoDiscapacidad=var5.getText().toString();
-            String campoEspecificaciones=var6.getText().toString();
-
-            ContentValues datos= new ContentValues();
-
-            datos.put("campoIdentificacion", campoIdentificacion);
-            datos.put("campoNombre", campoNombre);
-            datos.put("campoGrado", campoGrado);
-            datos.put("campoEdad", campoEdad);
-            datos.put("campoDiscapacidad", campoDiscapacidad);
-            datos.put("campoEspecificaciones", campoEspecificaciones);
-            int conteo=bd.update("estudiantes", datos, "campoIdentificacion" + campoIdentificacion, null);
-            bd.close();
-
-            var1.setText("");
-            var2.setText("");
-            var3.setText("");
-            var4.setText("");
-            var5.setText("");
-            var6.setText("");
-
-            if (conteo==1)
-                Toast.makeText(this, "Se modificaron los datos del estudiante", Toast.LENGTH_SHORT).show();
-
-            else
-            {
-                Toast.makeText(this, "No existe ese estudiante", Toast.LENGTH_SHORT).show();
-
-            }
-        }
-
-    }*/
     public void consultar_datos(View v){
 
 

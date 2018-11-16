@@ -15,7 +15,6 @@ public class Menu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-        // Botón de salida (final de la aplicación)
         final Button boton_salida = (Button)findViewById(R.id.exit_button);
         boton_salida.setOnClickListener(new OnClickListener() {
             @Override
@@ -66,8 +65,8 @@ public class Menu extends AppCompatActivity {
         startActivity(i);
 
     }
-    public void salir(View v) {
-        Intent i = new Intent(this, Salir.class);
+    public void a_cerca_de(View v) {
+        Intent i = new Intent(this, A_Cerca_de.class);
 
         startActivity(i);
 
