@@ -178,7 +178,7 @@
                     android:layout_width="201dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="Discapacidad"
+                    android:text="Discapacidad:"
                     android:textStyle="normal|bold" />
 
                 <EditText
@@ -199,11 +199,11 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/Especificaciones"
                     android:layout_width="201dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="Nombre:"
+                    android:text="Especificaciones"
+                    android:textSize="13sp"
                     android:textStyle="normal|bold" />
 
                 <EditText

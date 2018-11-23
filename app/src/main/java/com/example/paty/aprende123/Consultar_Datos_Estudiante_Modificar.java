@@ -11,94 +11,101 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class Consultar_Datos_Estudiante_Modificar extends AppCompatActivity {
-    private EditText var1, var2, var3, var4, var5, var6;
+    private EditText et1,et2,et3,et4,et5,et6;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_consultar__datos__estudiante__modificar);
-        var1=(EditText)findViewById(R.id.campoIdentificacion);
-        var2=(EditText)findViewById(R.id.EditTextNombre);
-        var3=(EditText)findViewById(R.id.EditTextGrado);
-        var4=(EditText)findViewById(R.id.EditTextEdad);
-        var5=(EditText)findViewById(R.id.EditTextDiscapacidad);
-        var6=(EditText)findViewById(R.id.EditTextEspecificaciones);
+        et1=(EditText)findViewById(R.id.et1);
+        et2=(EditText)findViewById(R.id.et2);
+        et3=(EditText)findViewById(R.id.et3);
+        et4=(EditText)findViewById(R.id.et4);
+        et5=(EditText)findViewById(R.id.et5);
+        et6=(EditText)findViewById(R.id.et6);
     }
-    public void consultaEstudiante(View view){
-        if (var1.getText().length()==0){
-            var1.setError("Ingresa la Identificación");
+    public void ingresar(View v) {
+        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this,
+                "ProyectoAprende", null, 1);
+        SQLiteDatabase bd = admin.getWritableDatabase();
+        String cod = et1.getText().toString();
+        String nom = et2.getText().toString();
+        String grado = et3.getText().toString();
+        String edad = et4.getText().toString();
+        String disc = et5.getText().toString();
+        String espec = et6.getText().toString();
+        ContentValues registro = new ContentValues();
+        registro.put("campoIdentificacion", cod);
+        registro.put("campoNombre", nom);
+        registro.put("campoGrado", grado);
+        registro.put("campoEdad", edad);
+        registro.put("campoDiscapacidad", disc);
+        registro.put("campoEspecificaciones", espec);
+        bd.insert("estudiantes", null, registro);
+        bd.close();
+        et1.setText("");
+        et2.setText("");
+        et3.setText("");
+        et4.setText("");
+        et5.setText("");
+        et6.setText("");
+        Toast.makeText(this, "Se guardaron los datos del estudiante",
+                Toast.LENGTH_SHORT).show();
+    }
 
-        }
+    public void consultaporcodigo(View v) {
+        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this,
+                "ProyectoAprende", null, 1);
+        SQLiteDatabase bd = admin.getWritableDatabase();
+        String cod = et1.getText().toString();
+        Cursor fila = bd.rawQuery(
+                "select campoNombre, campoGrado, campoEdad, campoDiscapacidad, campoEspecificaciones from estudiantes where campoIdentificacion=" + cod, null);
+        if (fila.moveToFirst()) {
+            et2.setText(fila.getString(0));
+            et3.setText(fila.getString(1));
+            et4.setText(fila.getString(2));
+            et5.setText(fila.getString(3));
+            et6.setText(fila.getString(4));
+
+        } else
+            Toast.makeText(this, "No existe la identificación ingresada, inténtelo nuevamente.",
+                    Toast.LENGTH_SHORT).show();
+        bd.close();
+    }
+    public void modificacion(View v) {
+        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this,
+                "ProyectoAprende", null, 1);
+        SQLiteDatabase bd = admin.getWritableDatabase();
+        String cod = et1.getText().toString();
+        String nom = et2.getText().toString();
+        String grado = et3.getText().toString();
+        String edad = et4.getText().toString();
+        String disc = et5.getText().toString();
+        String espec = et6.getText().toString();
+        ContentValues registro = new ContentValues();
+        registro.put("campoIdentificacion", cod);
+        registro.put("campoNombre", nom);
+        registro.put("campoGrado", grado);
+        registro.put("campoEdad", edad);
+        registro.put("campoDiscapacidad", disc);
+        registro.put("campoEspecificaciones", espec);
+        int cant = bd.update("estudiantes", registro, "campoIdentificacion=" + cod, null);
+        bd.close();
+        et1.setText("");
+        et2.setText("");
+        et3.setText("");
+        et4.setText("");
+        et5.setText("");
+        et6.setText("");
+        if (cant == 1)
+            Toast.makeText(this, "Se actualizaron los datos del estudiante correctamente.", Toast.LENGTH_SHORT)
+                    .show();
         else
-        {
-            AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "Proyecto", null, 1);
-            SQLiteDatabase bd=admin.getWritableDatabase();
-            String campoIdentificacion=var1.getText().toString();
-
-            Cursor fila= bd.rawQuery("select campoNombre, campoGrado, campoEdad, campoDiscapacidad, campoEspecificaciones from estudiantes where campoIdentificacion = " + campoIdentificacion, null);
-
-            if(fila.moveToFirst()){
-
-                var2.setText(fila.getString(0));
-                var3.setText(fila.getString(1));
-                var4.setText(fila.getString(2));
-                var5.setText(fila.getString(3));
-                var6.setText(fila.getString(4));
-            }
-            else
-            {
-                Toast.makeText(this, "El Estudiante no ha sido Ingresado", Toast.LENGTH_SHORT).show();
-                bd.close();
-            }
-
-        }
+            Toast.makeText(this, "No existe la identificación ingresada, inténtelo nuevamente.",
+                    Toast.LENGTH_SHORT).show();
 
     }
-   public void modificar(View v){
-        if(var1.getText().length()==0){
-            var1.setError("Ingresar la Identificación");
 
-        }
-        else
-        {
-            AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "Proyecto", null, 1);
-            SQLiteDatabase bd=admin.getWritableDatabase();
-            String campoIdentificacion=var1.getText().toString();
-            String campoNombre=var2.getText().toString();
-            String campoGrado=var3.getText().toString();
-            String campoEdad=var4.getText().toString();
-            String campoDiscapacidad=var5.getText().toString();
-            String campoEspecificaciones=var6.getText().toString();
-
-            ContentValues datos= new ContentValues();
-
-            datos.put("campoIdentificacion", campoIdentificacion);
-            datos.put("campoNombre", campoNombre);
-            datos.put("campoGrado", campoGrado);
-            datos.put("campoEdad", campoEdad);
-            datos.put("campoDiscapacidad", campoDiscapacidad);
-            datos.put("campoEspecificaciones", campoEspecificaciones);
-            int conteo=bd.update("estudiantes", datos, "campoIdentificacion" + campoIdentificacion, null);
-            bd.close();
-
-            var1.setText("");
-            var2.setText("");
-            var3.setText("");
-            var4.setText("");
-            var5.setText("");
-            var6.setText("");
-
-            if (conteo==1)
-                Toast.makeText(this, "Se modificaron los datos del estudiante", Toast.LENGTH_SHORT).show();
-
-            else
-            {
-                Toast.makeText(this, "No existe ese estudiante", Toast.LENGTH_SHORT).show();
-
-            }
-        }
-
-    }
     public void modificar_datos(View v){
 
 

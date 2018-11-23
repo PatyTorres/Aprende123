@@ -24,8 +24,6 @@
         <activity android:name=".Conteo" />
         <activity android:name=".Colores" />
         <activity android:name=".Conceptos_Basicos" />
-        <activity android:name=".Monedas" />
-        <activity android:name=".Numeros_Mayas" />
         <activity android:name=".Operaciones" />
         <activity android:name=".Colores_Secundarios" />
         <activity android:name=".Colores_Terciarios" />
@@ -44,10 +42,7 @@
         <activity android:name=".Conteo8" />
         <activity android:name=".Conteo9" />
         <activity android:name=".Conteo10" />
-        <activity android:name=".Actividad_Unidad_Medida" />
-        <activity android:name=".Actividad_unidad_medida2" />
         <activity android:name=".Actividad_Conteo" />
-        <activity android:name=".Actividad_Monedas" />
         <activity android:name=".Actividad_Figuras_Geometricas" />
         <activity android:name=".Actividad_Operaciones" />
         <activity android:name=".Conteo11" />

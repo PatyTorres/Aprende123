@@ -115,7 +115,7 @@
                     android:background="@color/md_blue_grey_800"
                     android:ems="10"
                     android:gravity="center"
-                    android:hint="Ingrese la Discapacidad: (Intelectual/física)"
+                    android:hint="Discapacidad: (Intelectual/física)"
                     android:inputType="textPersonName"
                     android:textColor="@color/md_grey_300"
                     android:textColorHint="@color/md_grey_50"

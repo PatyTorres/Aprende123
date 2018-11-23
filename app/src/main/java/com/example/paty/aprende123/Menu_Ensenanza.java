@@ -33,12 +33,6 @@ public class Menu_Ensenanza extends AppCompatActivity {
         startActivity(i);
 
     }
-    public void monedas(View v){
-        Intent i = new Intent(this, Monedas.class);
-
-        startActivity(i);
-
-    }
     public void figuras_geometricas(View v){
         Intent i = new Intent(this, Figuras_Geometricas.class);
 

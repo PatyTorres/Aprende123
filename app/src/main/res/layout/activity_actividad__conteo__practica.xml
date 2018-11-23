@@ -7,51 +7,70 @@
     android:background="@color/md_blue_grey_200"
     tools:context=".Actividad_Conteo_Practica">
 
-    <TextView
-        android:id="@+id/textView16"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        android:foregroundGravity="center"
-        android:gravity="center"
-        android:text="¡APRENDE A CONTAR!"
-        android:textColor="@color/md_black_1000"
-        android:textSize="40sp"
-        android:textStyle="bold" />
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/text_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/push_button"
-        android:layout_centerHorizontal="true"
-        android:gravity="center"
-        android:text="0"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textColor="#ff0000"
-        android:textSize="120sp"></TextView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
 
-    <Button
-        android:id="@+id/push_button"
-        android:layout_width="355dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="201dp"
-        android:background="@color/colorPrimaryDark"
-        android:onClick="perform_action"
-        android:text="PRESIONA PARA VER EL SIGUIENTE NÚMERO"
-        android:textColor="@android:color/background_light"
-        android:textSize="20sp"></Button>
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="15dp"
+                android:foregroundGravity="center"
+                android:gravity="center"
+                android:text="¡APRENDE A CONTAR!"
+                android:textColor="@color/md_black_1000"
+                android:textSize="40sp"
+                android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="81dp"
-        android:onClick="actividad_conteo"
-        android:text="Siguiente Actividad" />
+            <TextView
+                android:id="@+id/text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/push_button"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:foregroundGravity="center"
+                android:gravity="center"
+                android:text="0"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="#ff0000"
+                android:textSize="120sp"></TextView>
+
+            <Button
+                android:id="@+id/push_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="20dp"
+                android:background="@color/colorPrimaryDark"
+                android:onClick="perform_action"
+                android:text="PRESIONA PARA VER EL SIGUIENTE NÚMERO"
+                android:textColor="@android:color/background_light"
+                android:textSize="20sp"></Button>
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginBottom="100dp"
+                android:layout_marginTop="30dp"
+                android:foregroundGravity="center"
+                android:gravity="center"
+                android:onClick="actividad_conteo"
+                android:text="Siguiente Actividad" />
+
+        </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>

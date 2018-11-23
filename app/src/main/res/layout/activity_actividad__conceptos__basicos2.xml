@@ -97,6 +97,7 @@
                 android:id="@+id/button7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="100dp"
                 android:background="@android:color/holo_green_light"
                 android:onClick="menu_actividad"
                 android:text="ACTIVIDAD TERMINADA"

@@ -11,7 +11,7 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table estudiantes(campoIdentificacion integer primary key, campoNombre text, campoGrado text, campoEdad int, campoDiscapacidad text, campoEspecificaciones)");
+        db.execSQL("create table estudiantes(campoIdentificacion integer primary key, campoNombre text, campoGrado text, campoEdad int, campoDiscapacidad text, campoEspecificaciones text)");
 
     }
 
@@ -19,7 +19,7 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
         db.execSQL("drop table if exists estudiantes ");
-        db.execSQL("create table estudiantes(campoIdentificacion integer primary key, campoNombre text, campoGrado text, campoEdad int, campoDiscapacidad text, campoEspecificaciones)");
+        db.execSQL("create table estudiantes(campoIdentificacion integer primary key, campoNombre text, campoGrado text, campoEdad int, campoDiscapacidad text, campoEspecificaciones text)");
 
 
     }

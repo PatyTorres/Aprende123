@@ -8,87 +8,112 @@
     android:orientation="vertical"
     tools:context=".Actividad_Operaciones">
 
-    <TextView
-        android:id="@+id/textView19"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="10dp"
-        android:text="¡APRENDE A SUMAR!"
-        android:textColor="@color/colorAccent"
-        android:textSize="24sp"
-        android:textStyle="bold" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView18"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="72dp"
-        android:text="Instrucciones: Coloca los números y presiona el botón sumar, y obtén el resultado."
-        android:textColor="@android:color/background_light" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
 
-    <EditText
-        android:id="@+id/editText1"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="135dp"
-        android:background="@color/md_blue_grey_100"
-        android:gravity="center"
-        android:hint="Ingrese el primer número." />
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:foregroundGravity="center"
+                android:gravity="center"
+                android:text="¡APRENDE A SUMAR!"
+                android:textColor="@color/colorAccent"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="206dp"
-        android:background="@color/md_blue_grey_100"
-        android:gravity="center"
-        android:hint="Ingrese el segundo número." />
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="40dp"
+                android:foregroundGravity="center"
+                android:gravity="center"
+                android:text="Instrucciones: Coloca los números y presiona el botón sumar. ¡Obtén el resultado!"
+                android:textColor="@android:color/background_light" />
 
-    <Button
-        android:id="@+id/btnSumar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="245dp"
-        android:background="@color/md_blue_grey_900"
-        android:gravity="center"
-        android:text="SUMAR"
-        android:textColor="@android:color/background_light" />
+            <EditText
+                android:id="@+id/editText1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"
+                android:background="@color/md_blue_grey_100"
+                android:foregroundGravity="center"
+                android:gravity="center"
+                android:hint="Ingrese el primer número." />
 
-    <TextView
-        android:id="@+id/textViewResultado"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="197dp"
-        android:text="Resultado es: "
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textStyle="bold" />
+            <EditText
+                android:id="@+id/editText2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="20dp"
+                android:background="@color/md_blue_grey_100"
+                android:gravity="center"
+                android:hint="Ingrese el segundo número." />
 
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="164dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="61dp"
-        android:background="@color/md_blue_grey_900"
-        android:gravity="center"
-        android:onClick="actividad_operaciones2"
-        android:text="Siguiente Actividad"
-        android:textColor="@android:color/background_light" />
+            <Button
+                android:id="@+id/btnSumar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginBottom="40dp"
+                android:layout_marginTop="40dp"
+                android:background="@color/md_blue_grey_900"
+                android:foregroundGravity="center"
+                android:gravity="center"
+                android:text="SUMAR"
+                android:textColor="@android:color/background_light" />
+
+            <TextView
+                android:id="@+id/textViewResultado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginBottom="70dp"
+                android:foregroundGravity="center"
+                android:gravity="center"
+                android:text="Resultado es: "
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="164dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="100dp"
+                android:background="@color/md_blue_grey_900"
+                android:foregroundGravity="center"
+                android:gravity="center"
+                android:onClick="actividad_operaciones2"
+                android:text="Siguiente Actividad"
+                android:textColor="@android:color/background_light" />
+        </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>

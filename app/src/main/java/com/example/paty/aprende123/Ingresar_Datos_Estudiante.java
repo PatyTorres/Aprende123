@@ -51,7 +51,7 @@ public class Ingresar_Datos_Estudiante extends AppCompatActivity {
 
         else
         {
-            AdminSQLiteOpenHelper admin= new AdminSQLiteOpenHelper(this, "Proyecto", null,1);
+            AdminSQLiteOpenHelper admin= new AdminSQLiteOpenHelper(this, "ProyectoAprende", null,1);
             SQLiteDatabase bd = admin.getWritableDatabase();
 
             String campoIdentificacion=var1.getText().toString();
