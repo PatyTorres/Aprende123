@@ -20,10 +20,13 @@ public class Actividad_Conteo extends AppCompatActivity {
     public void actividad_conteo(View v) {
 
     }
-
+    //Es una función que recibe un parametro view (Para que desde el XML pueda poner en la opción onClick, el nombre de ésta función
+    //Sin los parametros (View v) ésto no funcionaría
     public void actividad_conteo2(View v) {
+        //Intent es un objeto que Inicia una nueva ventana, de acuerdo al contexto (Ventana en ejecución)
+        //Se le pasa el contexto y luego la qué clase que se quiera abrir (Otra activity)
         Intent i = new Intent(this, Actividad_Conteo2.class);
-
+        //Inicia el intento de abrir la pantalla
         startActivity(i);
 
     }

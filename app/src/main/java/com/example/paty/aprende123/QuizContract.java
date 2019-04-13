@@ -7,6 +7,7 @@ public final class QuizContract {
     private QuizContract(){
     }
 
+    //Solo son Constantes que se definen para el Quiz
     public static class CategoriesTable implements BaseColumns {
         public static final String TABLE_NAME = "quiz_categories";
         public static final String COLUMN_NAME = "name";

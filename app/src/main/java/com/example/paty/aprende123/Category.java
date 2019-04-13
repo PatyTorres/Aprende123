@@ -1,6 +1,7 @@
 package com.example.paty.aprende123;
 
 public class Category {
+    //Este es un objeto que almacena la información de Categoria
     public static final int PROGRAMMING = 1;
     public static final int GEOGRAPHY = 2;
     public static final int MATH = 3;

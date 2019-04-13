@@ -17,6 +17,7 @@ public class Consultar_Datos extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_consultar__datos);
+        //Busca componentes Edit text por su Id, dentro de activity_consultar_datos
         var1=(EditText)findViewById(R.id.campoIdentificacion);
         var2=(EditText)findViewById(R.id.EditTextNombre);
         var3=(EditText)findViewById(R.id.EditTextGrado);
@@ -26,19 +27,25 @@ public class Consultar_Datos extends AppCompatActivity {
     }
     public void consultaEstudiante(View view){
         if (var1.getText().length()==0){
+            //Establece un texto ingresa la identificación
             var1.setError("Ingresa la Identificación");
 
         }
         else
         {
+            //Inicializa la base de datos
             AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "ProyectoAprende", null, 1);
+            //Abre la base de datos para escribir
             SQLiteDatabase bd=admin.getWritableDatabase();
+            //Se obtiene el id que se ingresó en campoIdentificación
             String campoIdentificacion=var1.getText().toString();
 
+            //Busca el estudiante por el id que tenga CampoIndentificación
             Cursor fila= bd.rawQuery("select campoNombre, campoGrado, campoEdad, campoDiscapacidad, campoEspecificaciones from estudiantes where campoIdentificacion = " + campoIdentificacion, null);
 
+            //Busca el primer resultado que encuentre
             if(fila.moveToFirst()){
-
+                //Muestra los datos de estudiantes
                 var2.setText(fila.getString(0));
                 var3.setText(fila.getString(1));
                 var4.setText(fila.getString(2));
@@ -47,6 +54,7 @@ public class Consultar_Datos extends AppCompatActivity {
             }
             else
             {
+                //Muestra un mensaje que el estudiante no ha sido ingresado
                 Toast.makeText(this, "El Estudiante no ha sido Ingresado", Toast.LENGTH_SHORT).show();
                 bd.close();
             }

@@ -31,6 +31,7 @@ public class QuizDbHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
+        //Crea las tablas
         this.db = db;
 
         final String SQL_CREATE_CATEGORIES_TABLE = "CREATE TABLE " +
@@ -61,6 +62,7 @@ public class QuizDbHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        //Elimina las tablas, y luego llama a la función que crea de nuevo las tablas
         db.execSQL("DROP TABLE IF EXISTS " + CategoriesTable.TABLE_NAME);
         db.execSQL("DROP TABLE IF EXISTS " + QuestionsTable.TABLE_NAME);
         onCreate(db);
@@ -73,6 +75,7 @@ public class QuizDbHelper extends SQLiteOpenHelper {
     }
 
     private void fillCategoriesTable() {
+        //Crea una lista de categorías, que se muestran en el QUIZ
         Category c1 = new Category("Nivel Matemático Fácil");
         addCategory(c1);
         Category c2 = new Category("Nivel Matemático Medio");
@@ -82,15 +85,18 @@ public class QuizDbHelper extends SQLiteOpenHelper {
     }
 
     private void addCategory(Category category) {
+        //Función para agregar una nueva categoría a la BD
         ContentValues cv = new ContentValues();
         cv.put(CategoriesTable.COLUMN_NAME, category.getName());
         db.insert(CategoriesTable.TABLE_NAME, null, cv);
     }
 
     private void fillQuestionsTable() {
+        //Estas son las preguntas que se muestran el las pantallas
         Question q1 = new Question("2 + 1 = ¿Cuál es la suma?",
                 "3", "5", "6", 1,
                 Question.DIFFICULTY_EASY, Category.PROGRAMMING);
+        //Llama Función que inserta la pregunta
         addQuestion(q1);
         Question q2 = new Question("10 + 15 = ¿Cuál es la suma?",
                 "21", "25", "27", 2,
@@ -114,6 +120,7 @@ public class QuizDbHelper extends SQLiteOpenHelper {
         addQuestion(q6);
     }
 
+    //Función que inserta la pregunta en BD
     private void addQuestion(Question question) {
         ContentValues cv = new ContentValues();
         cv.put(QuestionsTable.COLUMN_QUESTION, question.getQuestion());
@@ -126,6 +133,7 @@ public class QuizDbHelper extends SQLiteOpenHelper {
         db.insert(QuestionsTable.TABLE_NAME, null, cv);
     }
 
+    //Funcion que obtiene todas las categorías
     public List<Category> getAllCategories() {
         List<Category> categoryList = new ArrayList<>();
         db = getReadableDatabase();
@@ -144,12 +152,14 @@ public class QuizDbHelper extends SQLiteOpenHelper {
         return categoryList;
     }
 
+    //Obtiene todas las preguntas
     public ArrayList<Question> getAllQuestions() {
         ArrayList<Question> questionList = new ArrayList<>();
         db = getReadableDatabase();
         Cursor c = db.rawQuery("SELECT * FROM " + QuestionsTable.TABLE_NAME, null);
 
         if (c.moveToFirst()) {
+            //Selecciona hasta que termine
             do {
                 Question question = new Question();
                 question.setId(c.getInt(c.getColumnIndex(QuestionsTable._ID)));
@@ -168,6 +178,8 @@ public class QuizDbHelper extends SQLiteOpenHelper {
         return questionList;
     }
 
+
+    //Obtiene todas las preguntas
     public ArrayList<Question> getQuestions(int categoryID, String difficulty) {
         ArrayList<Question> questionList = new ArrayList<>();
         db = getReadableDatabase();

@@ -4,6 +4,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class Question implements Parcelable {
+    //Son costantes para identificar lo que seleccionen
     public static final String DIFFICULTY_EASY = "Fácil";
     public static final String DIFFICULTY_MEDIUM = "Medio";
     public static final String DIFFICULTY_HARD = "Difícil";
@@ -21,6 +22,7 @@ public class Question implements Parcelable {
 
     }
 
+    //Este es un contructor que recibe parametros, question, opciones, el número de la respuesta, la dificultad y la categoría
     public Question(String question, String option1, String option2, String option3, int answerNr, String difficulty, int categoryID) {
         this.question = question;
         this.option1 = option1;

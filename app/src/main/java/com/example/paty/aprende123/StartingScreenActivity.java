@@ -37,10 +37,12 @@ public class StartingScreenActivity extends AppCompatActivity {
         spinnerCategory = findViewById(R.id.spinner_category);
         spinnerDifficulty = findViewById(R.id.spinner_difficulty);
 
+        //Carga las categorías dificutltades, niveles y el punteo mas alto
         loadCategories();
         loadDifficultyLevels();
         loadHighscore();
 
+        //Botón que sirve para iniciar el quiz
         Button buttonStartQuiz = findViewById(R.id.button_start_quiz);
         buttonStartQuiz.setOnClickListener(new View.OnClickListener(){
 
@@ -51,12 +53,18 @@ public class StartingScreenActivity extends AppCompatActivity {
             }
         } );
     }
+
+    //Funcion que inicia el quiz
     private void startQuiz(){
+        //Este es como un combobox , en donde se obtiene el ítem categoría que se haya seleccionado
         Category selectedCategory = (Category) spinnerCategory.getSelectedItem();
+        //Se obtienen los datos de la categoría
         int categoryID = selectedCategory.getId();
         String categoryName = selectedCategory.getName();
+        //Se obtiene la dificultad elegida por el usuario
         String difficulty = spinnerDifficulty.getSelectedItem().toString();
 
+        //Se inicia el quiz, enviando los parameetros de id, nombre y dificultad, y espera al resultado
         Intent intent = new Intent(StartingScreenActivity.this, QuizActivity.class);
         intent.putExtra(EXTRA_CATEGORY_ID, categoryID);
         intent.putExtra(EXTRA_CATEGORY_NAME, categoryName);
@@ -64,6 +72,7 @@ public class StartingScreenActivity extends AppCompatActivity {
         startActivityForResult(intent, REQUEST_CODE_QUIZ);
     }
 
+    //Esto se ejecuta cuando se cierre la actividad Quiz y se muestra el resultado
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -72,6 +81,7 @@ public class StartingScreenActivity extends AppCompatActivity {
             if (resultCode == RESULT_OK) {
                 int score = data.getIntExtra(QuizActivity.EXTRA_SCORE, 0);
                 if (score > highscore) {
+                    //Ejecuta la función actualizar punteo
                     updateHighscore(score);
                 }
             }
@@ -103,6 +113,8 @@ public class StartingScreenActivity extends AppCompatActivity {
         textViewHighscore.setText("Puntuación: " + highscore);
     }
 
+
+    //Se guarda el resultado más alto en una base de datos de Android (SharedPreferences)
     private void updateHighscore(int highscoreNew) {
         highscore = highscoreNew;
         textViewHighscore.setText("Puntuación: " + highscore);

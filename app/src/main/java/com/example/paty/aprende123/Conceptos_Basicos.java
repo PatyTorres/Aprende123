@@ -17,13 +17,16 @@ public class Conceptos_Basicos extends AppCompatActivity {
 
 
         final RelativeLayout rl = (RelativeLayout) findViewById(R.id.rl);
+        //Busca el boton con id btn dentro de activity_operaciones
         Button btn = (Button) findViewById(R.id.btn);
+        //Busca el componente que muestra imágenes ImageView , dentro del activity_operaciones
         final ImageView iv = (ImageView) findViewById(R.id.iv);
 
+        //Agrega una cción cuando se le de click al botón btn
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                //Busca la imagen "cb_derecha" y lo coloca en el componente ImageView
                 iv.setImageDrawable(getDrawable(R.drawable.cb_derecha));
             }
         });

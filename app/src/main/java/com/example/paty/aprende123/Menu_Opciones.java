@@ -13,8 +13,10 @@ public class Menu_Opciones extends AppCompatActivity {
         setContentView(R.layout.activity_menu__opciones);
     }
     public void datos_eliminar(View v){
+        //Intent es un objeto que Inicia una nueva ventana, de acuerdo al contexto (Ventana en ejecución)
+        //Se le pasa el contexto y luego la qué clase que se quiera abrir (Otra activity)
         Intent i = new Intent(this, Consultar_Datos_Estudiante_Eliminar.class);
-
+        //Inicia el intento
         startActivity(i);
     }
     public void modificar_datos(View v){

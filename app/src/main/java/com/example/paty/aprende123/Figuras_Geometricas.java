@@ -19,10 +19,11 @@ public class Figuras_Geometricas extends AppCompatActivity {
         Button btn = (Button) findViewById(R.id.btn);
         final ImageView iv = (ImageView) findViewById(R.id.iv);
 
+        //Agrega una cción cuando se le de click al botón btn
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                //Busca la imagen "cb_derecha" y lo coloca en el componente ImageView
                 iv.setImageDrawable(getDrawable(R.drawable.circulo1));
             }
         });

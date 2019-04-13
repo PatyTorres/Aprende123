@@ -61,6 +61,7 @@ public class QuizActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
 
+        //Busca los componentes por ID, en el archivo xml activity_quiz
         textViewQuestion = findViewById(R.id.text_view_question);
         textViewScore = findViewById(R.id.text_view_score);
         textViewQuestionCount =findViewById(R.id.text_view_question_count);
@@ -76,11 +77,13 @@ public class QuizActivity extends AppCompatActivity {
         textColorDefaultRb = rb1.getTextColors();
         textColorDefaultCd = textViewCountDown.getTextColors();
 
+        //Obtiene parametros que se le enviaron desde el activity anterior, como id de categoría y catengoría nombre y dificultad
         Intent intent = getIntent();
         int categoryID = intent.getIntExtra(StartingScreenActivity.EXTRA_CATEGORY_ID, 0);
         String categoryName = intent.getStringExtra(StartingScreenActivity.EXTRA_CATEGORY_NAME);
         String difficulty = intent.getStringExtra(StartingScreenActivity.EXTRA_DIFFICULTY);
 
+        //Se muestra la categroía y dificultad que se recibió de la pantalla anterior
         textViewCategory.setText("Categoría: " + categoryName);
         textViewDifficulty.setText("Dificultad: " + difficulty);
 
@@ -92,11 +95,13 @@ public class QuizActivity extends AppCompatActivity {
 
             showNextQuestion();
         } else {
+            //Muestra la pregunta actual y cuenta la cantidad de preguntas
             questionList = savedInstanceState.getParcelableArrayList(KEY_QUESTION_LIST);
             questionCountTotal = questionList.size();
             questionCounter = savedInstanceState.getInt(KEY_QUESTION_COUNT);
             currentQuestion = questionList.get(questionCounter - 1);
             score = savedInstanceState.getInt(KEY_SCORE);
+            //Tiempo que falta para limitar el quiz
             timeLeftInMillis = savedInstanceState.getLong(KEY_MILLIS_LEFT);
             answered = savedInstanceState.getBoolean(KEY_ANSWERED);
 
@@ -108,16 +113,19 @@ public class QuizActivity extends AppCompatActivity {
             }
         }
 
+        //Ir a la siguiente pregunta
         buttonConfirmNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (!answered) {
+                    //Si no se respondío, impedirlo, y forzar a que elija una respuesta
                     if (rb1.isChecked() || rb2.isChecked() || rb3.isChecked()) {
                         checkAnswer();
                     } else {
                         Toast.makeText(QuizActivity.this, "Porfavor selecciona una respuesta", Toast.LENGTH_SHORT).show();
                     }
                 } else {
+                    //Muestra la siguiente pregunta
                     showNextQuestion();
                 }
             }
@@ -130,6 +138,7 @@ public class QuizActivity extends AppCompatActivity {
         rb3.setTextColor(textColorDefaultRb);
         rbGroup.clearCheck();
 
+        //Verifica si no se han completado las preguntas, continua mostrando las preguntas
         if (questionCounter < questionCountTotal) {
             currentQuestion = questionList.get(questionCounter);
 
@@ -144,12 +153,15 @@ public class QuizActivity extends AppCompatActivity {
             buttonConfirmNext.setText("Confirmar");
 
             timeLeftInMillis = COUNTDOWN_IN_MILLIS;
+            //Inicializa el contador
             startCountDown();
         } else {
+            //Si se hicieron todas las pregutnas, se finaliza
             finishQuiz();
         }
     }
 
+    //Inicia el cronometro
     private void startCountDown() {
         countDownTimer = new CountDownTimer(timeLeftInMillis, 1000) {
             @Override
@@ -167,6 +179,7 @@ public class QuizActivity extends AppCompatActivity {
         }.start();
     }
 
+    //Función que actualiza el texto mostrando el tiempo del cronómetro de forma descendente
     private void updateCountDownText() {
         int minutes = (int) (timeLeftInMillis / 1000) / 60;
         int seconds = (int) (timeLeftInMillis / 1000) % 60;
@@ -176,29 +189,37 @@ public class QuizActivity extends AppCompatActivity {
         textViewCountDown.setText(timeFormatted);
 
         if (timeLeftInMillis < 10000) {
+            //Si el tiempo es menor a 10 segundos, pone el texto en rojo
             textViewCountDown.setTextColor(Color.RED);
         } else {
             textViewCountDown.setTextColor(textColorDefaultCd);
         }
     }
 
+    //Comprueba la respuesta y detiene el cronómetro
     private void checkAnswer() {
         answered = true;
 
+        //Detiene el cronómetro
         countDownTimer.cancel();
 
+        //Los radio buttons son las respuestas
         RadioButton rbSelected = findViewById(rbGroup.getCheckedRadioButtonId());
         int answerNr = rbGroup.indexOfChild(rbSelected) + 1;
 
+        //Comprueba si la respuesta es correcta
         if (answerNr == currentQuestion.getAnswerNr()) {
+            //Aumenta la puntuación y lo muestra en el textview
             score++;
             textViewScore.setText("Puntuación: " + score);
         }
 
+        //Muestra la respuesta correcta
         showSolution();
     }
 
     private void showSolution() {
+        //Muestra la respuesta correcta, en el textview textViewQuestion
         rb1.setTextColor(Color.RED);
         rb2.setTextColor(Color.RED);
         rb3.setTextColor(Color.RED);
@@ -226,9 +247,12 @@ public class QuizActivity extends AppCompatActivity {
     }
 
     private void finishQuiz() {
+        //Terminar el quiz, envía el parametro punteo
         Intent resultIntent = new Intent();
         resultIntent.putExtra(EXTRA_SCORE, score);
+        //Envía que se realizó una acción y los parametros
         setResult(RESULT_OK, resultIntent);
+        //Cierra la pantalla Quiz
         finish();
     }
 
